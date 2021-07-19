@@ -1,6 +1,6 @@
 <template>
   <footer class="footer_guide border-1px">
-    <span  class="guide_item" :class="{on:$route.path==='/msite'}"> <!-- 类名确定，只是不确定有没有 -->
+    <span  class="guide_item"> <!-- 类名确定，只是不确定有没有 -->
       <span class="item_icon">
         <i class="iconfont icon-waimai"></i>
       </span>
@@ -8,13 +8,11 @@
         <span>外卖</span>
       </router-link>
     </span>
-    <span class="guide_item" :class="{on:$route.path==='/search'}"> 
+    <span class="guide_item"> 
       <span class="item_icon">
         <i class="iconfont icon-search"></i>
       </span>
-      <router-link to="search" replace>
-       <span>搜索</span>
-      </router-link>
+      <span>搜索</span>
     </span>
     <a href="javascript:;" class="guide_item" :class="{on:$route.path==='/order'}" @click="goTo('/order')">
       <span class="item_icon">
