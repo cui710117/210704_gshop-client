@@ -1,0 +1,25 @@
+<template>
+  <div>
+      <router-view/>
+      <FooterGuide/>
+  </div>
+</template>
+
+<script>
+import {reqAddress} from './api/index'
+import FooterGuide from './components/FooterGuide/FooterGuide.vue'
+
+export default {
+  mounted () {
+    //触发vuex的getAddress(),从后台获取address
+    this.$store.dispatch('getAddress')
+  },
+  components: {
+    FooterGuide
+  }
+}
+</script>
+
+<style lang="stylus" rel="stylesheet/stylus" scoped>
+
+</style>
